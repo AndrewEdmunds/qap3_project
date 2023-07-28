@@ -1,4 +1,3 @@
-/* Reset some default styles to create a clean slate */
 body, h1, h2, ul, li, form {
   margin: 0;
   padding: 0;
@@ -28,15 +27,15 @@ h1, h2 {
   color: #000000;
 }
 
-/* Define CSS variables */
+
 :root {
-  --primary-color: #007bff;       /* Primary color (Blue) */
-  --secondary-color: #08e400;     /* Secondary color (Green) */
+  --primary-color: #007bff;
+  --secondary-color: #08e400;
   --light-gray: #9b9b9b;
   --border-color: #f700d6;
   --box-shadow-color: rgba(0, 0, 0, 0.1);
-  --complementary1-color: #ff5733; /* Complementary color 1 (Orange) */
-  --complementary2-color: #d3ff33; /* Complementary color 2 (Purple) */
+  --complementary1-color: #ff5733;
+  --complementary2-color: #d3ff33;
 }
 
 form {
@@ -55,8 +54,8 @@ label {
 
 input[type="text"],
 input[type="email"] {
-  width: 80%; /* Set the width to 80% */
-  max-width: 300px; /* Optionally set a max-width for larger screens */
+  width: 80%;
+  max-width: 300px;
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid var(--border-color);
