@@ -1,0 +1,165 @@
+/* Reset some default styles to create a clean slate */
+body, h1, h2, ul, li, form {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #3d3d3d;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px var(--box-shadow-color);
+  background: linear-gradient(to right, var(--complementary1-color), var(--complementary2-color));
+  border-radius: 10px;
+}
+
+
+h1, h2 {
+  margin-bottom: 15px;
+  text-align: center;
+  color: #000000;
+}
+
+/* Define CSS variables */
+:root {
+  --primary-color: #007bff;       /* Primary color (Blue) */
+  --secondary-color: #08e400;     /* Secondary color (Green) */
+  --light-gray: #9b9b9b;
+  --border-color: #f700d6;
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
+  --complementary1-color: #ff5733; /* Complementary color 1 (Orange) */
+  --complementary2-color: #d3ff33; /* Complementary color 2 (Purple) */
+}
+
+form {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 80%; /* Set the width to 80% */
+  max-width: 300px; /* Optionally set a max-width for larger screens */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  border-color: var(--primary-color);
+}
+
+button {
+  padding: 10px 15px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"] {
+  background-color: var(--secondary-color);
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.user-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.user-list li {
+  margin-bottom: 15px;
+  padding: 15px;
+  background-color: var(--light-gray);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px var(--box-shadow-color);
+}
+
+.user-info {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.update-form {
+  margin-bottom: 15px;
+}
+
+.search-result-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 15px;
+}
+
+.search-result-list li {
+  padding: 10px;
+  background-color: var(--light-gray);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px var(--box-shadow-color);
+}
+
+.home-button {
+  display: block;
+  padding: 10px 15px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px var(--box-shadow-color);
+  transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

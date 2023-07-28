@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1><%= title %></h1>
+
+    <% if (!searchedUsername) { %>
+      <h2>Add New User:</h2>
+      <form id="add-user-form" action="/users" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" required>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+        <button type="submit">Add User</button>
+      </form>
+
+      <h2>List of Users:</h2>
+      <ul class="user-list">
+        <% users.forEach(user => { %>
+          <li>
+            <div class="user-info">
+              <strong><%= user.username %></strong> - <%= user.email %>
+            </div>
+            <div class="update-form">
+              <form action="/users/<%= user.user_id %>?_method=PATCH" method="POST">
+                <label class="form-label" for="newUsername">New Username:</label>
+                <input type="text" name="username" id="newUsername" required>
+                <button type="submit">Update Username</button>
+              </form>
+              <form action="/users/<%= user.user_id %>?_method=PATCH" method="POST">
+                <label class="form-label" for="newEmail">New Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="email" name="email" id="newEmail" required>
+                <button type="submit">Update Email</button>
+              </form>
+            </div>
+            <form action="/users/<%= user.user_id %>?_method=DELETE" method="POST">
+              <button type="submit">Delete</button>
+            </form>
+          </li>
+        <% }); %>
+      </ul>
+    <% } %>
+
+    <h2>Search for User:</h2>
+    <form id="search-user-form" action="/search" method="POST">
+      <label for="searchUsername">Username:</label>
+      <input type="text" name="searchUsername" id="searchUsername" required>
+      <button type="submit">Search</button>
+    </form>
+
+    <% if (searchedUsername) { %>
+      <% if (users.length > 0) { %>
+        <h2>Search Results:</h2>
+        <ul class="search-result-list">
+          <% users.forEach(user => { %>
+            <li><strong><%= user.username %></strong> - <%= user.email %></li>
+          <% }); %>
+        </ul>
+      <% } else { %>
+        <p>No users found with the username <%= searchedUsername %>.</p>
+      <% } %>
+      <a href="/" class="home-button">Home</a>
+    <% } %>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
